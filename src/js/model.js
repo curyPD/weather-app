@@ -21,7 +21,6 @@ export const getWeatherData = async function (coordinates) {
       `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=45342ac40cb9ef695441b927f8ac5ee5`
     );
     if (!response.ok) throw new Error();
-    // `${response.status} (Couldn't find weather data for provided location). Please follow the correct query format.`
     const data = await response.json();
     // 3. Update state weather data
     state.weatherData = {
@@ -48,7 +47,6 @@ export const getForecastedWeather = async function () {
       `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=metric&appid=45342ac40cb9ef695441b927f8ac5ee5`
     );
     if (!response.ok) throw new Error();
-    // `${response.status} (Couldn't find forecast data for provided location). Please follow the correct query format.`
     const { list: data } = await response.json();
     // 3. Update state forecast data
     const newData = data
@@ -73,7 +71,7 @@ export const getForecastedWeather = async function () {
 export const doGeocoding = async function (cityName, countryCode) {
   try {
     const response = await fetch(
-      `http://api.openweathermap.org/geo/1.0/direct?q=${cityName}${
+      `https://api.openweathermap.org/geo/1.0/direct?q=${cityName}${
         countryCode ? ',' + countryCode : ''
       }&appid=45342ac40cb9ef695441b927f8ac5ee5`
     );
@@ -85,7 +83,3 @@ export const doGeocoding = async function (cityName, countryCode) {
     throw err;
   }
 };
-
-// https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lng}&units=metric&appid=45342ac40cb9ef695441b927f8ac5ee5
-// https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lng}&units=metric&appid=45342ac40cb9ef695441b927f8ac5ee5
-// http://api.openweathermap.org/geo/1.0/direct?q={city name},{state code},{country code}&limit={limit}&appid={API key}
