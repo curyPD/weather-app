@@ -1,0 +1,22 @@
+/* 600px */
+@media (max-width: 37.5em) {
+  html {
+    font-size: 56.25%;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  .forecast__list {
+    overflow-x: auto;
+  }
+
+  .form-section {
+    padding: 2.4rem 1.6rem;
+  }
+
+  .weather-section {
+    padding: 1.6rem;
+  }
+}

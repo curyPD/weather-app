@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" type="image/png" href="src/img/favicon.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="src/styles/style.css" />
+    <link rel="stylesheet" href="src/styles/queries.css" />
+
+    <title>Weather App</title>
+
+    <script defer type="module" src="src/js/controller.js"></script>
+    <script defer src="https://unpkg.com/phosphor-icons"></script>
+  </head>
+  <body>
+    <div class="card">
+      <section class="form-section">
+        <form class="form">
+          <label for="input" class="label">Please, follow this format</label>
+          <input
+            type="text"
+            class="input-field"
+            id="input"
+            placeholder="City, Country"
+          />
+          <button class="btn btn--fill">
+            <i class="ph-magnifying-glass icon"></i>
+            <span>Search</span>
+          </button>
+        </form>
+      </section>
+      <section class="weather-section">
+        <div class="message">
+          <span class="message__text">
+            Get weather data from over 200,000 cities around the world!
+          </span>
+        </div>
+
+        <!-- <p class="location">Paris, FR</p>
+        <div class="date-time-box">
+          <p class="date">2/18/2022</p>
+          <p class="time">2:55 PM</p>
+        </div>
+        <div class="weather-box">
+          <p class="temperature">
+            <span class="temperature__value">12</span>
+            <button class="btn btn--text btn--switch-unit">
+              <span class="temperature__unit">°C</span>
+            </button>
+          </p>
+          <div class="weather">
+            <i class="ph-cloud"></i>
+            <span class="description">Cloudy</span>
+            <i class="ph-drop"></i>
+            <p class="humidity">
+              <span class="humidity__value">67</span
+              ><span class="humidity__unit">%</span>
+            </p>
+            <i class="ph-wind"></i>
+            <p class="wind">
+              <span class="wind__value">8</span>
+              <span class="wind__unit">m/s</span>
+            </p>
+          </div>
+        </div> -->
+      </section>
+      <!-- <div class="spinner">
+        <div class="spinner__box">
+          <i class="ph-spinner spinner__icon"></i>
+        </div>
+      </div> -->
+      <section class="forecast-section">
+        <ul class="forecast__list">
+          <!--<li class="day">
+            <a href="" class="forecast__link">
+            <p class="forecast__date">2/18/2022</p>
+          <i class="ph-cloud forecast__icon"></i>
+          <p class="forecast__temperature">10°C</p>
+          </a>
+        </li>
+        <li class="day">
+          <a href="" class="forecast__link">
+          <p class="forecast__date">3/19/2022</p>
+          <i class="ph-cloud-sun forecast__icon"></i>
+          <p class="forecast__temperature">10°C</p>
+          </a>
+        </li>
+        <li class="day">
+          <a href="" class="forecast__link">
+          <p class="forecast__date">4/20/2022</p>
+          <i class="ph-cloud forecast__icon"></i>
+          <p class="forecast__temperature">10°C</p>
+          </a>
+        </li>
+        <li class="day">
+          <a href="" class="forecast__link">
+          <p class="forecast__date">5/21/2022</p>
+          <i class="ph-cloud forecast__icon"></i>
+          <p class="forecast__temperature">10°C</p>
+          </a>
+        </li>
+        <li class="day">
+          <a href="" class="forecast__link">
+          <p class="forecast__date">6/22/2022</p>
+          <i class="ph-cloud-rain forecast__icon"></i>
+          <p class="forecast__temperature">10°C</p>
+          </a>
+        </li>  -->
+        </ul>
+      </section>
+    </div>
+  </body>
+</html>
+<!-- API key: 45342ac40cb9ef695441b927f8ac5ee5 -->
+<!-- Password: JbWB)AHJ/t%,83Q -->

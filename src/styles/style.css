@@ -1,0 +1,295 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: none;
+}
+
+html {
+  font-size: 62.5%; /* 1rem = 10px */
+}
+
+body {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 400;
+  line-height: 1;
+  color: #fff;
+  color: #343a40;
+  background-image: linear-gradient(to bottom right, #a5d8ff, #6741d9);
+  height: 100vh;
+  position: relative;
+}
+
+.card {
+  width: 55rem;
+  border-radius: 1.6rem;
+  box-shadow: 0 1.2rem 2.4rem rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  overflow: hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.form-section {
+  padding: 2.4rem 3.2rem;
+}
+
+.form {
+  position: relative;
+}
+
+.label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 1.1rem;
+  color: #868e96;
+  transform: translate(2.4rem, -130%);
+  opacity: 0;
+  transition: all 0.2s;
+}
+
+.input-field {
+  display: block;
+  border: none;
+  background: none;
+
+  font-size: 1.6rem;
+  color: inherit;
+  width: 100%;
+  padding: 1.4rem 2.4rem;
+  background-color: #fff;
+  border: 1px solid #dee2e6;
+  border-radius: 1000px;
+  transition: all 0.2s;
+}
+
+.input-field::placeholder {
+  color: #adb5bd;
+}
+
+.input-field:focus {
+  border: 1px solid #868e96;
+}
+
+.btn {
+  border: none;
+  background: none;
+  cursor: pointer;
+
+  font-family: inherit;
+  color: inherit;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+
+  transition: all 0.2s;
+}
+
+.btn--fill {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  height: 100%;
+
+  font-size: 1.6rem;
+  color: #fff;
+  background-image: linear-gradient(to bottom right, #a5d8ff, #6741d9);
+  border-radius: 1000px;
+  padding: 0 2.4rem;
+}
+
+.btn--fill:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0.6rem 1.2rem rgba(0, 0, 0, 0.2);
+}
+
+.btn--fill:active {
+  transform: scale(1.025);
+  box-shadow: 0 0.3rem 0.6rem rgba(0, 0, 0, 0.2);
+}
+
+.btn--text:hover {
+  color: #495057;
+}
+
+.weather-section {
+  padding: 2.4rem 3.2rem;
+  margin-bottom: 2.4rem;
+}
+
+.location {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-bottom: 1.6rem;
+}
+
+.date-time-box {
+  display: flex;
+  align-items: center;
+  gap: 3.2rem;
+  color: #868e96;
+}
+
+.date-time-box {
+  margin-bottom: 2.4rem;
+}
+
+.date {
+  font-size: 1.4rem;
+}
+
+.time {
+  font-size: 1.4rem;
+}
+
+.weather-box {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  align-items: center;
+  column-gap: 2.4rem;
+}
+
+.temperature {
+  display: flex;
+  align-items: center;
+
+  grid-column: 1;
+  grid-row: 1 / -1;
+}
+
+.temperature__value,
+.temperature__unit {
+  font-size: 7.2rem;
+  font-weight: 500;
+}
+
+.weather {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.8rem 1.2rem;
+  grid-row: 1 / -1;
+}
+
+.humidity,
+.wind,
+.description {
+  font-size: 1.6rem;
+}
+
+i {
+  font-size: 1.8rem;
+}
+
+.forecast-section {
+  padding: 2.4rem 1.2rem 1.2rem;
+}
+
+.forecast__list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+}
+
+.forecast__item {
+  text-align: center;
+
+  padding: 1.2rem;
+  background-color: #fff;
+  border: 1px solid #e9ecef;
+  flex: 1;
+
+  border-radius: 0.8rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.forecast__item:hover {
+  border: 1px solid #d0bfff;
+}
+
+.forecast__item--active {
+  background-color: #f3f0ff;
+  border: 1px solid #d0bfff;
+}
+
+.forecast__date {
+  font-size: 1.2rem;
+  margin-bottom: 0.8rem;
+  color: #868e96;
+}
+
+.forecast__icon {
+  margin-bottom: 0.8rem;
+}
+
+.forecast__temperature {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.message,
+.error {
+  text-align: center;
+  max-width: 36rem;
+  margin: 0 auto;
+  padding: 1.2rem;
+}
+
+.message__text,
+.error__text {
+  font-size: 1.6rem;
+  line-height: 1.5;
+  color: #868e96;
+}
+
+.forecast-section .message,
+.forecast-section .error {
+  border-top: 1px solid #dee2e6;
+}
+
+.forecast-section .message__text,
+.forecast-section .error__text {
+  font-size: 1.2rem;
+  line-height: 1.3;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spinner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.spinner__box {
+  display: inline-block;
+  background-image: linear-gradient(to bottom right, #a5d8ff, #6741d9);
+  background-clip: text;
+  -webkit-background-clip: text;
+  transform-origin: center;
+  animation: spin 2s infinite linear;
+}
+
+.spinner__icon {
+  font-size: 4.8rem;
+  text-align: center;
+  color: transparent;
+}
