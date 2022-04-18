@@ -15,7 +15,16 @@ class WeatherView extends View {
   }
 
   _generateMarkup() {
-    const now = new Date();
+    const now =
+      Date.now() +
+      24 *
+        60 *
+        60 *
+        1000 *
+        (this._data.forecastData.length === 0
+          ? 0
+          : this._data.forecastData.indexOf(this._data.weatherData));
+
     const date = this._getDate(now);
     const time = this._getTime(now);
 
