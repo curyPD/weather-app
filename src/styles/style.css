@@ -197,7 +197,7 @@ i {
 .forecast__list {
   list-style: none;
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
   gap: 1.2rem;
 }
 
